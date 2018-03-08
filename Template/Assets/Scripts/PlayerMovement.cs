@@ -2,39 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
-    [SerializeField]
-    private float speed;
+public class PlayerMovement : Character {
+    
 
     // Use this for initialization
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        Move();
+        PlayerInput();
+        base.Update();
     }
 
-    public void Move()
+    //Method to get player movement based on which key is pressed
+    public void PlayerInput()
     {
-        while (Input.GetKeyDown(KeyCode.RightArrow))
+        direction = Vector2.zero;
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            direction += Vector2.right;
         }
-        //while (Input.GetKeyDown(KeyCode.LeftArrow))
-        //{
-        //    transform.Translate(Vector2.left * speed * Time.deltaTime);
-        //}
-        //while (Input.GetKeyDown(KeyCode.UpArrow))
-        //{
-        //    transform.Translate(Vector2.up * speed * Time.deltaTime);
-        //}
-        //while (Input.GetKeyDown(KeyCode.DownArrow))
-        //{
-        //    transform.Translate(Vector2.down * speed * Time.deltaTime);
-        //}
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        {
+            direction += Vector2.left;
+        }
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            direction += Vector2.up;
+        }
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            direction += Vector2.down; 
+        }
     }
 }
