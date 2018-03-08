@@ -15,7 +15,19 @@ public class PlayerMovement : Character {
     protected override void Update()
     {
         PlayerInput();
-        base.Update();
+        base.Update(); //base allows us to access the update function inside of the Character script
+        followMouse();
+    }
+
+    //Method for player to follow the direction of the mouse
+    public void followMouse()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+        transform.up = direction;
     }
 
     //Method to get player movement based on which key is pressed
