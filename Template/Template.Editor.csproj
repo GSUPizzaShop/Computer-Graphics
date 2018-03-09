@@ -289,8 +289,41 @@
       <Project>{343AEF09-0FD4-5417-3AE3-6B98AD6916A2}</Project>
       <Name>Template</Name>
     </ProjectReference>
+    <ProjectReference Include="Template.Plugins.csproj">
+      <Project>{EA7D2A50-D383-56A3-B9DD-4F803E57435E}</Project>
+      <Name>Template.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BulletUnity\Examples\SceneMenu\Editor\UpdateScenesListMenu.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\B6DOFConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\BBallSocketConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\BConeTwistConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\BFixedConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\BHingedConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\BSliderConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Constraints\Editor\BTypedConstraintEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BBoxShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BBvhTriangleMeshShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BCapsuleShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BCollisionObjectEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BCompoundShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BConeShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BConvexHullShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BConvexTriangleMeshShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BCylinderShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BGhostObjectEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BMultiSphereShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BPairCachingGhostObjectEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BPhysicsWorldEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BPrimitiveComponentOrderSorter.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BRigidBodyEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BSoftBodyComponentOrderSorter.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BSoftBodyEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\BSphereShapeEditor.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\EditorHelpers.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\EditorInterface.cs" />
+    <Compile Include="Assets\BulletUnity\Scripts\Editor\PrimitiveEditor.cs" />
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
     <Compile Include="Assets\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
@@ -339,7 +372,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Backyard - Free\Readme.txt" />
+    <None Include="Assets\BulletUnity\Documentation\README-REALY-README.txt" />
+    <None Include="Assets\BulletUnity\Documentation\README-UniversalWindowsPlatform.txt" />
+    <None Include="Assets\BulletUnity\InternalResources\LineRenderFix.shader" />
+    <None Include="Assets\BulletUnity\license.txt" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\Plugins\BulletUnity\Native\OSX\libbulletc.bundle\Contents\Resources\CMakeLists.txt" />
     <None Include="Assets\ShooterSpritePack\ReadMe.txt" />
     <None Include="Assets\Simple Health Bar\README.txt" />
   </ItemGroup>
